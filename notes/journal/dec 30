@@ -1,0 +1,96 @@
+Works :
+    Complete Msft calendar 
+    Integrate Msft and google to one app 
+    Put them in chrome extension - chrome store license - app verification - logo 
+    Paint em 
+    Document, code cleanup, structure, readable/maintainable, refactor eye candy 
+    Integration
+    check all null/undefined errs , add/remove try catches, handle all errs, no errs in ui, 
+    Test -> bugs - fix cycle , 
+    Commit and release 
+**************************
+Small changes by Rita:
+    attendies, if not org/owner/creator , if not description 
+    refresh button 
+    time 
+    Datetime more readable 
+
+Bugs :
+    Msft one has no start time, end time, no of events filter
+    no sign out for msft 
+    the "when" check for goog not in msft 
+    webLink vs videoLink (hangouts or skype)
+    the calendar id primary ugly 
+    iCalUId vs event id vs cal id 
+    goog automatically fetches for the second time but msft needs a click 
+    msft gets oauth token every fucking time only when in extn 
+
+Code review :
+    put the scripts in head 
+
+
+
+----------------
+
+1:55pm IST-
+    Looking for sign in button msft - hold  
+    moving to chrome extn 
+
+2:10 - 
+    access from index.html instead of locahost 
+
+
+steps in extn oauth (goog, msft) login logout fetch tokenexp 
+what about iframe 
+what if access indiv file 
+what if in extn 
+what about iframe in extn 
+what about just site 
+
+5:40 - return from work out 
+file:///home/mani/Desktop/dialoggbox/iframe.html works so just extn should work 
+testing in play boo acnt. works like a charm 
+
+PROB : https://i.imgur.com/L8vkCd5.png - cannot pull ext js in this context for security reasons 
+2 more PROB https://i.imgur.com/38XEmGD.png
+https://i.imgur.com/vlUV6TY.png
+https://i.imgur.com/zFz04Im.png
+https://i.imgur.com/CMXV35i.png
+https://i.imgur.com/m3HEmX8.png
+when removed origin this happens https://i.imgur.com/21m80kD.png
+google sign in doesnt work from extn ifram 
+
+-------
+
+rita update :
+file:// issue in extn so iframe soln 
+2 prob. msft everytime pops. not auto fetch  
+need to host in server 
+
+
+rita talk :
+icon, 
+link in goog, msft  (connect ), prominent 
+description - mtg link, participants 
+creator/owner comes in guest list 
+show all the events - cant find the diff betn meeting and other 
+today's events 
+
+momentum
+
+sort 
+
+what if its not a metting 
+
+
+     final :
+        only today's events 
+        standalone secure recommended standard (except), no cumbersome 
+        guest -> desc 
+        mtg link -> desc 
+        if not logged in then show login , other wise no 
+        no many pieces cumbersone - std oauth for extn and native clients 
+
+chrome on android 
+
+popup blocking - sign in new tab 

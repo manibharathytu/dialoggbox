@@ -1,0 +1,57 @@
+<!-- Copyright © 2020 IdealilyCorp. All rights reserved -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calendar</title>
+  <meta charset="utf-8" />
+
+
+  <style>
+    .meetingContainer {
+      border-style: solid;
+      border-color: #b1eab1;
+      border-width: 3px;
+      padding: 10 10 10 10;
+      /* font-family:'verdana' */
+      padding-left: 10px;
+      /* padding-top: 10px; */
+      padding-bottom: 10px;
+    }
+
+    .joinButton {
+      border: solid;
+      color: white;
+      background: #00c1ff;
+      height: 34px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- <p>Google Calendar</p> -->
+
+  <!--Add buttons to initiate auth sequence and sign out-->
+  <button id="authorize_button" style="display: none;">Google Sign In</button>
+  <button id="signout_button" style="display: none;">Google Sign Out</button>
+  <button onclick="getCal();getUser();">Microsoft Sign In</button>
+
+  <pre id="content" style="white-space: pre-wrap;"></pre>
+
+  <script type="text/javascript" src="./secrets.js"></script>
+  <script src="lib/msal.min.js"></script>
+  <script type="text/javascript" src="lib/msft-graph.js"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> -->
+  <script type="text/javascript" src="./msft.js"></script>
+  <!-- <script type="text/javascript" src="./main.js"></script> -->
+
+  <script src="app.js"></script>
+  <script src="goog.js"></script>
+
+  <script async defer src="lib/gapi.js" onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+</body>
+
+</html>

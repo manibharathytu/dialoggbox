@@ -1,0 +1,154 @@
+3:30 - microsoft http graph ai 
+    create api key msft 
+
+    try removing server and work local file html. so that it works in 
+    fix the email err in goog 
+
+    secrets needs to be entered error - cdn url err - constructor err 
+    found the recent version of msal 1.4.4. still the same - acc to npm and 
+https://alcdn.msauth.net/lib/1.4.4/js/msal.min.js
+https://unpkg.com/@microsoft/microsoft-graph-client@1.0.0/lib/graph-js-sdk-web.js
+
+4:30 - rest 
+
+11:50 - msft graph api example - get it work 
+following the instructions here https://github.com/microsoftgraph/msgraph-sdk-javascript
+
+found v1.2.1 is the max available https://secure.aadcdn.microsoftonline-p.com/lib/1.2.1/js/msal.min.js
+now the options err not coming.
+
+https://azuread.github.io/microsoft-authentication-library-for-js/ref/msal-core/
+
+15 min break 
+
+closed all brow 
+
+redirect uri err, client id err 
+
+afer replacing 
+still unauthorized_client: The client does not exist or is not enabled for consumers
+
+okay I had to grant conscent 
+
+still the same https://i.imgur.com/6lsek2I.png. going to the link in that 
+
+12:48 -
+    googling the err 
+
+    1:00 - lunch
+
+    1:30 - back 
+        askin github , search goog 
+
+    after doing the azure app page changes in auth tab, able to go to sign in page but not use personal acnts 
+
+    tried editing manifest 	"signInAudience": "AzureADandPersonalMicrosoftAccount",
+    accessTokenAcceptedVersion invalid err 
+	"accessTokenAcceptedVersion": 2, worked . refer https://stackoverflow.com/questions/57826919/azure-ad-how-to-set-app-manifest-properties-programatically-accesstokenaccept
+
+    another err now https://i.imgur.com/7fHRrih.png - fixed it by adding the redirect uri in auth page 
+    another err https://i.imgur.com/yoRXVRT.png 
+    tried all response types - not working 
+    https://github.com/MicrosoftDocs/azure-docs/issues/37847
+    https://i.imgur.com/yY02Zvu.png - enabling these 2 worked 
+
+    3:00 - break 
+
+    3:30 - msft calendar use 
+
+    added calendar api and Testing. edited te main js, req js, index html in the browser folder of the ms graph js github 
+    access denied err 
+4:00
+    still the error https://i.imgur.com/K6zWWr2.png even after granting the graph calender read permission for both delegated and non deleg apps 
+    googling the err 
+    https://github.com/microsoftgraph/msgraph-sdk-javascript/issues/283
+
+4:10 - 4:40 - rita call in skype 
+
+5:00 - back to msft adn chrome extn 
+
+lunch 
+
+6:30 - start . back to the calendar msft permission issue 403 api reply 
+https://github.com/microsoftgraph/msgraph-sdk-javascript/issues/282
+https://www.google.com/search?q=access+is+denied.+check+credentials+and+try+again.+microsoft+graph+api&oq=Access+is+denied.+Check+credentials+and+try+again.&aqs=chrome.1.69i57j0i20i263i457j0j0i22i30l5.2339j0j7&sourceid=chrome&ie=UTF-8
+https://www.google.com/search?newwindow=1&sxsrf=ALeKk00gnDfuAGnzDYwXh_y3geV_xFXQTA%3A1609240173595&ei=bQ7rX471I62f4-EPxKqs-Ak&q=access+is+denied.+check+credentials+and+try+again.+microsoft+graph+api+calendar&oq=access+is+denied.+check+credentials+and+try+again.+microsoft+graph+api+calendar&gs_lcp=CgZwc3ktYWIQAzoECAAQRzoHCAAQyQMQHjoECCEQClDV5TZY8fc2YJr5NmgAcAJ4AIABuQGIAYoJkgEDMC44mAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=psy-ab&ved=0ahUKEwjO357nhvPtAhWtzzgGHUQVC58Q4dUDCA0&uact=5
+
+8:55 https://i.imgur.com/nIX3hzy.png
+
+tried with other api endpoints 
+mail is working but other calenders are not 
+
+9:08 trying with powershell. 
+
+try more mail 
+
+***one drive working, mail working, but calender and one note not working 
+
+token renewal failed  err 
+10:00 - 
+    may be its because the app is not verified? i dont think so. 
+    for mail also now throws the error "he request does not contain a valid authentication token" which happened only for notes 
+
+10:15 - 
+    try in python or node 
+    trying this https://github.com/bexway/outloook-calendar-reader/blob/master/run.py
+
+so user reconscent is the thing 
+
+https://docs.microsoft.com/en-us/graph/tutorials/javascript?tutorial-step=4
+----------------
+
+Progress :
+3:30 https://github.com/microsoftgraph/msgraph-sdk-javascript
+checkout and run it - 
+created app in msft azure  https://i.imgur.com/iZ3xUHK.png
+https://www.youtube.com/watch?v=c0MXF1hFquA&ab_channel=Microsoft365Developer
+
+-----
+
+Qs :
+what origin is for extn. our creds are going to be in client side and if no origin protection then how secure 
+msft has only client id 
+how to protect the oauth credentials - is origin the only way? then how for the chrome extn and native apps 
+
+-----------
+
+terms :
+msft graph api 
+msal 
+graph js sdk web 
+
+
+------------
+
+msft resources :
+https://github.com/microsoftgraph/msgraph-sdk-javascript/blob/dev/README.md#1-register-your-application
+https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-core#installation
+https://docs.microsoft.com/en-us/graph/outlook-calendar-concept-overview
+https://docs.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0
+https://github.com/microsoftgraph/msgraph-sdk-javascript/issues/283
+--------
+
+Doc :
+Register application 
+Set redir uri 
+Set API permissions and give admin conscent 
+In Azure app page, inside authentication tab, enable for public and sso 
+Edit the manifest for pubilic access 
+
+    	"signInAudience": "AzureADandPersonalMicrosoftAccount",
+	"accessTokenAcceptedVersion": 2, worked . refer https://stackoverflow.com/questions/57826919/azure-ad-how-to-set-app-manifest-properties-programatically-accesstokenaccept
+
+Enable the two checkboxes - token and other one 
+-----------
+
+rita call :
+    refresh 
+    time 
+    participants :
+        video conf - take from there 
+        no video conf - from guest 
+        parse description 
+
+

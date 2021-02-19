@@ -1,0 +1,93 @@
+Target :
+    meeting link from description if not in the video conf obj , skype web link 
+    if no guests then the owner/loggedInUser/
+    icon for goog n msft 
+    sign in sign out toggle is fine, we dont have to let users sign out
+    today's events - not important 
+    new page for login/link/connect to goog n msft. cos goog/msft first time login wont work in extn iframe
+    presentation - CSS and ui , view, good looking formate time 
+    only future meetings. sort by time 
+
+    old :
+        reset button - not needed as its refreshed everytime its clicked 
+        time - as in the doc 
+
+    squash the bugs :
+        the cal id , meeting id confu
+        skype meet link
+        goog primary calendar 
+        yesterday's bugs 
+        no undefined in view 
+
+
+
+-------
+
+Morning session was productive - 7:30 - 10:00 
+
+10 - 11 - bnb
+
+11 - starting 
+    looking in to page/tab crash and pop up block 
+    not working goog in play boo brow 
+    fixed 
+
+12:30 - moving to bulma 
+
+
+---------
+
+website way is better for security 
+we can use the site also 
+its useful for popup block 
+
+--------
+
+resource :
+https://i.imgur.com/0erY5tJ.png
+https://developers.google.com/calendar/v3/reference/events - goog cal event obj reference 
+
+
+---
+note :
+goog has no property in resp obj if its not mentioned (daves size)
+msft has all props everytime with empty 
+[]==[] is false
+
+onlineMeetingProvider, onlineMeetingUrl, onlineMeeting object (joinUrl)
+
+sometimes goog missing 
+
+
+seperate icon for meeting 
+
+transactionid 
+
+bug : that msft relogin/token fetch process happens even in browser now n then not only in extn 
+
+bug : google is missing when debugger is paused 
+bug : cache not refreshing in extn 
+bug : takes time to load extn page every tim 
+bug : starting with link in desc creates button text with that link 
+bug : html description cause that issue 
+bug: in web msft comes first then google, in extn opposite 
+
+------
+
+rita call :
+research, e2e polished 
+im better 
+survey 
+she is of diff status 
+
+chess 
+alan sherman - GM 
+TA - algorithms n automata 
+GM -
+
+
+honey, discoverly, grammerly 
+
+lacking understanding , communicaiton
+
+

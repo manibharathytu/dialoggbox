@@ -1,0 +1,43 @@
+https://www.google.com/search?q=oauth+chrome+extension&oq=oauth+from+chrom&aqs=chrome.1.69i57j0i22i30i457j0i22i30.51029j0j7&sourceid=chrome&ie=UTF-8
+https://developer.chrome.com/docs/extensions/mv2/tut_oauth/
+https://stackoverflow.com/questions/28330902/chrome-extension-example-of-oauth-2-0
+https://github.com/michaeloryl/oauth2-angularjs-chrome-extension-demo
+https://dev.to/n4beel/browser-extension-with-oauth-2-0-authorization-46l5
+https://github.com/whoisjuan/ChromeAuth2
+https://developer.chrome.com/docs/apps/app_identity/
+
+oauth in chrome extn :
+work around 
+just website in extension 
+
+
+-------
+
+oauth everytime gets the new token and sends that token to show its proof of access 
+
+what about oauth in native applications? then the same in chrome extn 
+
+may be chrome extn url is the origin 
+
+https://i.imgur.com/fdh0Att.png
+
+
+oauth in extn :
+redirection prob
+origin prob 
+oauth session token expire 
+popup block 
+sigin not work cos of redir prob, the oauth cookies are not set 
+
+
+soln :
+that link at top 
+iframe 
+chrome extn url as origin 
+may be the extn should be background extn 
+
+
+what about the client id and api key security , since its in client and no origin, anybody can use our name access ppls data 
+
+if chrome extn cant work with oauth how the native apps work 
+
